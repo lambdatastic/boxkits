@@ -1,0 +1,15 @@
+FROM ghcr.io/ublue-os/ubuntu-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="An example ContainerFile to demonstrate multiple image builds." \
+      maintainer="celkamada@gmail.com"
+
+# Copy the setup scripts and package list
+COPY ../scripts/ubuntu-sts2-devbox.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/ubuntu-sts2-devbox.packages /
+
+# Run the setup scripts
+RUN chmod +x ubuntu-sts2-devbox.sh distrobox-shims.sh && /ubuntu-sts2-devbox.sh
+RUN rm /ubuntu-sts2-devbox.sh /distrobox-shims.sh /ubuntu-sts2-devbox.packages
