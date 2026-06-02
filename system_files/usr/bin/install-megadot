@@ -1,0 +1,7 @@
+#!/bin/sh
+MEGADOT_DOWNLOAD_LINK="https://megadot.megacrit.com/4.5.1-m.13/megadot-4.5.1-m.13-linux-x86_64-editor-csharp.zip"
+
+# Download Rider and install it
+wget -N $MEGADOT_DOWNLOAD_LINK -P /tmp
+unzip /tmp/megadot-4.5.1-m.13-linux-x86_64-editor-csharp.zip -d /tmp/megadot-4.5.1-m.13
+sudo mv /tmp/megadot-4.5.1-m.13 /opt/
