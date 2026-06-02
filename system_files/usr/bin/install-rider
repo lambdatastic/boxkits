@@ -1,0 +1,7 @@
+#!/bin/sh
+RIDER_DOWNLOAD_LINK="https://download-cdn.jetbrains.com/rider/JetBrains.Rider-2026.1.2.tar.gz"
+
+# Download Rider and install it
+wget -N $RIDER_DOWNLOAD_LINK -P /tmp
+tar -xzf /tmp/JetBrains.Rider-2026.1.2.tar.gz -C /tmp
+sudo mv /tmp/JetBrains\ Rider-2026.1.2 /opt/Rider-2026.1.2

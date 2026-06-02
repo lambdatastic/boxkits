@@ -5,6 +5,8 @@ LABEL com.github.containers.toolbox="true" \
       summary="An example ContainerFile to demonstrate multiple image builds." \
       maintainer="celkamada@gmail.com"
 
+COPY system_files /
+
 # Copy the setup scripts and package list
 COPY ../scripts/ubuntu-sts2-devbox.sh /
 COPY ../scripts/distrobox-shims.sh /
